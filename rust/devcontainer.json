@@ -1,0 +1,14 @@
+{
+  "name": "Rust Development Container",
+  "image": "rust:latest",
+  "settings": {},
+  "extensions": [
+    "rust-lang.rust",
+    "1YiB.rust-bundle",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+  ],
+  "forwardPorts": [],
+  "postCreateCommand": "rustup component add rustfmt"
+
+}
