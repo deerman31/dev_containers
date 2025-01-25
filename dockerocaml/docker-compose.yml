@@ -1,0 +1,18 @@
+services:
+  ocaml:
+    image: ocaml:${VERSION:-latest}
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - ocaml:/home/opam/work
+volumes:
+  ocaml:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: ./src
